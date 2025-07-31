@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="imageColumn">
+        <p class="imageLegend">Photo by <span class="underlined">Zoltan Tasi</span> on <span class="underlined">Unsplash</span></p>
+        <p class="banner">TACTICAL</p>
+    </div>
+    <div class="contentColumn">
+        <div class="content">
+            <div class="contentText">
+                <p>Prepare to become a monster on the battlefield with our intense tactical courses led by ex-Special Forces instructors. Learn Urban Warfare, CQB, Precision Shooting, and much more.</p>
+                <p class="impactPhrase">Unleash the warrior within.</p>
+            </div>
+            <form action="" method="post">
+                <div class="inputContainer">
+                    <h1>Sign in</h1>
+                    <div class="formRow-1 formRow">
+                        <div class="firstName formItem">
+                            <label for="firstName">FIRST NAME</label>
+                            <input type="text" id="firstName" name="first_name" required>
+                        </div>
+                        <div class="lastName formItem">
+                            <label for="lastName">LAST NAME</label>
+                            <input type="text" id="lastName" name="last_name" required>
+                        </div>
+                    </div>
+                    <div class="formRow-2 formRow">
+                        <div class="email formItem">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="phoneNumber formItem">
+                            <label for="phoneNumber">PHONE NUMBER</label>
+                            <input type="tel" id="phoneNumber" name="phone_number" required>
+                        </div>
+                    </div>
+                    <div class="formRow-3 formRow">
+                        <div class="password formItem">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="confirmPassword formItem">
+                            <label for="confirmPassword">CONFIRM PASSWORD</label>
+                            <input type="password" id="confirmPassword" name="confirm_password" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="account">
+                    <button type="submit">Create Account</button>
+                    <p>Already have an account? <span class="login">Log in</span></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
