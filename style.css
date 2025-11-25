@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     display: flex;
+    background-color: black;
 }
 
 .imageColumn {
@@ -94,18 +95,15 @@ body {
     width: 40vw;
     height: 100vh;
 
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url(img/soldier.jpg);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url(images/soldier.jpg);
+    background-color: white;
     background-size: 100%;
-    background-position:
-        0 0, 
-        -1vw 0;
+    background-repeat: no-repeat;
 }
 
 .imageLegend {
     font-size: 0.9rem;
     color: white;
-
-    padding: 0 7px;
     margin-bottom: 5px;
 }
 
@@ -113,7 +111,7 @@ body {
     position: absolute;
     top: 33%;
 
-    font-size: 5.5rem;
+    font-size: 5vw;
     font-family: 'Elite Hacker (Corroded)';
     letter-spacing: 1rem;
     text-align: center;
@@ -129,19 +127,15 @@ span.underlined {
 }
 
 .contentColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
     width: 60vw;
     height: 100vh;
 
     background-color: black;
-}
-.content {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-evenly;
-
-    height: 100vh;
-
-    margin-left: 40px;
 }
 
 .contentText {
@@ -149,75 +143,83 @@ span.underlined {
     line-height: 1.5;
     color: white;
     
-    width: 700px;
+    width: 50vw;
 }
 
 .impactPhrase {
-    margin-top: 25px;
+    margin-top: 1.5rem;
+}
+
+.sign-up-form {
+    align-self: flex-start;
+    margin-left: 8.5%;
 }
 
 .inputContainer {
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    align-items: center;
+    gap: 1rem;
+
+    width: 40vw;
 
     font-family: var(--secondary-font);
     font-weight: bold;
 
     color: white;
     background-color: #111;
-    box-shadow: 3px 3px 3px #333;
+    box-shadow: 0.3rem 0.3rem 0.2rem #333;
 
-    padding: 20px 0 40px 40px;
-    border-radius: 8px 0 0 8px;
+    padding: 5%;
+    border-radius: 0.7rem;
 }
 
 h1 {
     font-size: 1.7rem;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .formRow {
     display: flex;
-    gap: 75px;
+    /* justify-content: space-between; */
+    gap: 3rem;
+    
 
     color: #999;
     letter-spacing: 0.1rem;
 }
 
 .formItem {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 input {
-    width: 250px;
+    width: 15vw;
+    max-height: 6vh;
 
     border: 2px solid transparent;
-    border-radius: 3px;
-    padding: 7px 12px;
+    border-radius: 0.3rem;
+    padding: 4%;
 }
 
 label {
-    margin-bottom: 2px;
+    white-space: nowrap;
+    margin-bottom: 0.05rem;
 }
 
 button {
     font-family: "Roboto";
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 
     color: white;
     background-color: var(--secondary-color);
 
     border: none;
     border-radius: 5px;
-    padding: 10px 50px;
+    padding: 1rem 5rem;
     cursor: pointer;
 
     transition: 0.2s;
@@ -233,12 +235,13 @@ button:active {
 }
 
 .account {
-    margin-top: 20px;
+    align-self: flex-start;
+    margin-left: 8.5%;
 }
 
 .account p {
     color: #999;
-    margin-top: 35px;
+    margin-top: 1rem;
 }
 
 span.login {
@@ -251,15 +254,96 @@ span.login:hover {
 }
 
 input[type="password"]:invalid {
-    border: 2px solid crimson;
+    border: 0.15rem solid crimson;
 }
 
 input:valid {
-    border: 2px solid seagreen;
+    border: 0.15rem solid seagreen;
 }
 
 input:focus {
     outline: none;
-    border: 2px solid blue;
-    box-shadow: 0 2px 4px #555;
+    border: 0.15rem solid blue;
+    box-shadow: 0 0 0.5rem #555;
+}
+
+@media (max-width: 900px) {
+    .imageColumn {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .contentColumn {
+        width: 100vw;
+
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)), url(images/bope.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .contentText {
+        width: 80vw;
+    }
+
+    .sign-up-form,
+    .account {
+        align-self: center;
+        margin: 0;
+    }
+
+    .account {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inputContainer{
+        width: 50vw;
+    }
+
+    .formRow {
+        width: 100%;
+        gap: 5%;
+    }
+    
+    input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 626px) {
+    .formRow {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .contentText {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: white;
+        text-align: center;
+    }
+
+    button {
+        padding: 2vw 5vw;
+    }
+}
+
+@media (max-width: 426px) {
+    .inputContainer {
+        width: 70vw;
+    }
+
+    .inputContainer h1 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        font-size: 1.3rem;
+    }
+
+    .formRow {
+        
+    }
 }
