@@ -16,6 +16,7 @@ It was designed from scratch using HTML and CSS, focusing on layout structure an
 ---
 ## ⚙️ **Features**
 
+- 📱 Full Responsiveness: Desktop, Tablet and Mobile.
 - 🎖️ Military-inspired visual theme and typography.
 - 📋 Custom sign-up form with structured input fields.
 - 🎯 Clear visual hierarchy using spacing, color, and layout.
