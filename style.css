@@ -180,7 +180,6 @@ h1 {
 
 .formRow {
     display: flex;
-    /* justify-content: space-between; */
     gap: 3rem;
     
 
@@ -268,14 +267,25 @@ input:focus {
 }
 
 @media (max-width: 900px) {
+    body {
+        flex-direction: column;
+    }
+
+    .imageColumn,
+    .contentColumn {
+        width: 100% !important;
+    }
+
+    .inputContainer {
+        width: 90%;
+    }
+
     .imageColumn {
         position: absolute;
         z-index: -1;
     }
 
     .contentColumn {
-        width: 100vw;
-
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)), url(images/bope.webp);
         background-repeat: no-repeat;
         background-size: cover;
@@ -341,9 +351,5 @@ input:focus {
 
     button {
         font-size: 1.3rem;
-    }
-
-    .formRow {
-        
     }
 }
